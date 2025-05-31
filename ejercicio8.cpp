@@ -5,10 +5,15 @@ int main(){
     int num1,num2,mcd,mcm;
     cout<<"Ingrese un numero: "; cin>>num1;
     cout<<"Ingrese otro numero: "; cin>>num2;
-
+    
+    if(num1>0 && num2>0){
     MCD_y_MCM(num1, num2, mcd, mcm);
     cout<<"\nEl valor del MCD es: "<<mcd<<endl;
     cout<<"\nEl valor del MCM es: "<<mcm<<endl;
+    }
+    else{
+        cout<<"\nLos valores ingresados deben ser positivos"<<endl;
+    }
     return 0;
 }
 
