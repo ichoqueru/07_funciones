@@ -3,10 +3,16 @@ using namespace std;
 int Fibonacci(int x);
 int main(){
 	int cant;	
-	cout<<"Ingrese cantidad de terminos a generar: "; cin>>cant;	
+	cout<<"Ingrese cantidad de terminos a generar: "; cin>>cant;
+    if(cant>=1){	
 	cout<<"\n---Serie de Fibonacci---"<<endl;
 	Fibonacci(cant);				
 	return 0;
+    }
+    else{
+        cout<<"\nDebe ingresar un numero positivo"<<endl;
+    	return 0;
+    }
 }
 
 int Fibonacci(int x){
