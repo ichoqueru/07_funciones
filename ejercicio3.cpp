@@ -10,8 +10,10 @@ int main(){
 }
 
 int Fibonacci(int x){
-	int num1,num2,num3,i,suma;
+	int num1,num2,num3,i,suma,resta,multi;
 	suma=0;
+    resta=2;
+	multi=1;
 	num1=0;
 	num2=1;
 	num3=1;
@@ -23,5 +25,7 @@ int Fibonacci(int x){
 		suma=suma+num3;
 	}
 	cout<<endl<<"\nLa suma es: "<<suma;
+    cout<<endl<<"\nLa resta es: "<<resta;
+	cout<<endl<<"\nLa multiplicacion es: "<<multi;
 	return num3; 
 }
