@@ -5,9 +5,13 @@ long long Factorial(int y);
 int main(){
 	int n;
 	cout<<"Ingrese un valor: "; cin>>n;
-	
-	Suma(n);
-	cout<<"\nLa suma es: "<<Suma(n);
+    if(n==0){
+        cout<<"\nEl resultado es indefinido"<<endl;
+    }
+    else{
+	    Suma(n);
+	    cout<<"\nLa suma es: "<<Suma(n)<<endl;
+    }
 	return 0;
 }
 
