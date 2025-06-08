@@ -7,6 +7,8 @@ int main(){
 	for(i=1;i<=cant;i++){
     int x, y, rMCD, rMCM;
 	cout<<"\nPar #"<<i<<endl;
+    cout<<"Ingrese un numero: "; cin>>x;
+	cout<<"Ingrese otro numero: "; cin>>y;
 	MCDyMCM(x, y, &rMCD, &rMCM);
 	cout<<"MCD: "<<rMCD<<endl;
 	cout<<"MCM: "<<rMCM<<endl;
