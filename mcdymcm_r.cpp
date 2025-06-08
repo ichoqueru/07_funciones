@@ -13,14 +13,13 @@ int main(){
 }
 
 void MCDyMCM(int a, int b, int &mcd, int &mcm){
-    int i;
-    i=1;
-    mcd=1;
-    while(i<=a && i<=b){
-        if(a%i==0 && b%i==0){
-            mcd=i;
-            i=i+1;
-        }
-    }
+    int aux,resi;
+    mcd=a;
+    aux=b;
+    do{
+    	resi=mcd%aux;
+    	mcd=aux;
+    	aux=resi;
+    }while(resi!=0);
     mcm=(a*b)/mcd;
 }
