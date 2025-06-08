@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+int euclides(int a, int b);
 void MCDyMCM(int a,int b, int *mcd, int *mcm);
 int main(){
     int cant,i;
@@ -15,7 +16,7 @@ int main(){
 		i--;
 		continue;
 	}
-    
+
 	MCDyMCM(x, y, &rMCD, &rMCM);
 	cout<<"MCD: "<<rMCD<<endl;
 	cout<<"MCM: "<<rMCM<<endl;
@@ -23,15 +24,17 @@ int main(){
 	return 0;
 }
 
+int euclides(int a, int b){
+    int resi;
+    while(b != 0){
+        resi=a%b;
+        a=b;
+        b=resi;
+    }
+    return a;
+}
+
 void MCDyMCM(int a, int b, int *mcd, int *mcm){
-	int i;
-	i=1;
-	*mcd=1;
-	while(i<=a && i<=b){
-		if(a%i==0 && b%i==0){
-			*mcd=i;
-		}
-		i=i+1;
-	}
+	*mcd=euclides(a,b);	
 	*mcm=(a*b)/(*mcd);
 }
