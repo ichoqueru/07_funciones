@@ -2,11 +2,15 @@
 using namespace std;
 void MCDyMCM(int a,int b, int *mcd, int *mcm);
 int main(){
-	int x=18, y=24;
-	int rMCD, rMCM;
+    int cant,i;
+	cout<<"Cuantos pares de numeros deseas ingresar? "; cin>>cant;
+	for(i=1;i<=cant;i++){
+    int x, y, rMCD, rMCM;
+	cout<<"\nPar #"<<i<<endl;
 	MCDyMCM(x, y, &rMCD, &rMCM);
 	cout<<"MCD: "<<rMCD<<endl;
 	cout<<"MCM: "<<rMCM<<endl;
+    }
 	return 0;
 }
 
