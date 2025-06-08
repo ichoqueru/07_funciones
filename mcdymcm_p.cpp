@@ -9,6 +9,13 @@ int main(){
 	cout<<"\nPar #"<<i<<endl;
     cout<<"Ingrese un numero: "; cin>>x;
 	cout<<"Ingrese otro numero: "; cin>>y;
+    if(x==0 || y==0){
+		cout<<"\nLos numeros deben ser distintos de cero"<<endl;
+		cout<<"Intente de nuevo";
+		i--;
+		continue;
+	}
+    
 	MCDyMCM(x, y, &rMCD, &rMCM);
 	cout<<"MCD: "<<rMCD<<endl;
 	cout<<"MCM: "<<rMCM<<endl;
